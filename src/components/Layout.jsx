@@ -35,7 +35,7 @@ const Layout = () => {
   const getCurrentDate = () => {
     const d = new Date();
     const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
-    return d.toLocaleDateString('en-GB', options).toUpperCase();
+    return d.toLocaleDateString('en-GB', options);
   };
 
   return (

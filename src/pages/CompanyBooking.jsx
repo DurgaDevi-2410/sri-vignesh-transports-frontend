@@ -113,12 +113,13 @@ const CompanyBooking = () => {
             </div>
             
             <div className="input-group shadow-sm rounded-pill overflow-hidden border bg-white" style={{ minWidth: '160px', height: '48px' }}>
+              <span className="input-group-text bg-white border-0 ps-3"><i className="bi bi-calendar3 text-primary"></i></span>
               <input 
                 type="date" 
-                className="form-control border-0 bg-white shadow-none px-3" 
+                className="form-control border-0 bg-white shadow-none ps-1 pe-3" 
                 value={filterDate} 
                 onChange={e => setFilterDate(e.target.value)}
-                style={{ fontSize: '0.9rem' }}
+                style={{ fontSize: '0.9rem', minWidth: '130px' }}
               />
             </div>
 
@@ -174,10 +175,10 @@ const CompanyBooking = () => {
                   currentRecords.map((b) => (
                     <tr key={b.id} style={{ borderBottom: '1px solid #f1f5f9' }}>
                       <td data-label="BOOKING & FLEET" className="px-4 py-4">
-                        <div className="d-flex align-items-center gap-2">
+                        <div className="d-flex flex-wrap align-items-center gap-2">
                           <div className="fw-700 text-dark" style={{ fontSize: '13px' }}>{b.date ? format(parseISO(b.date), 'dd MMM yyyy') : 'N/A'}</div>
-                          <div className="text-muted opacity-25 d-none d-lg-block">|</div>
-                          <span className="fw-800 text-primary" style={{ fontSize: '12px' }}>
+                          <span className="text-muted opacity-25 d-none d-lg-block">|</span>
+                          <span className="fw-800 text-primary bg-primary bg-opacity-10 px-2 py-0.5 rounded" style={{ fontSize: '11px' }}>
                             {b.vehicleNumber}
                           </span>
                         </div>

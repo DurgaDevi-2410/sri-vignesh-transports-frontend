@@ -120,8 +120,8 @@ const Dashboard = () => {
     return (
         <div className="animate-in pb-5">
             <div className="mb-5">
-                <h1 className="fw-900 mb-1" style={{ color: '#111827', letterSpacing: '-2px', fontSize: 'clamp(2rem, 5vw, 2.8rem)' }}>Fleet Intelligence</h1>
-                <p className="text-secondary fw-700 mb-0 opacity-40" style={{ fontSize: 'clamp(0.9rem, 2vw, 1.1rem)' }}>Real-time operational overview of Sri Vignesh Transports</p>
+                <h1 className="fw-900 mb-1" style={{ color: '#111827', letterSpacing: '-2px', fontSize: 'clamp(2rem, 5vw, 2.8rem)' }}>Sri Vignesh Transports</h1>
+                {/* <p className="text-secondary fw-700 mb-0 opacity-40" style={{ fontSize: 'clamp(0.9rem, 2vw, 1.1rem)' }}>Real-time operational overview of Sri Vignesh Transports</p> */}
             </div>
 
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-5">

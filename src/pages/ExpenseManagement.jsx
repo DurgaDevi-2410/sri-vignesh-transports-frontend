@@ -116,12 +116,13 @@ const ExpenseManagement = () => {
                 {filterCategories.map(c => <option key={c} value={c}>{c === 'All' ? 'All Ledger Items' : c}</option>)}
               </select>
               <div className="input-group shadow-sm rounded-pill overflow-hidden border bg-white" style={{ minWidth: '160px', height: '48px' }}>
+                <span className="input-group-text bg-white border-0 ps-3"><i className="bi bi-calendar3 text-primary"></i></span>
                 <input 
                   type="date" 
-                  className="form-control border-0 bg-white shadow-none px-3" 
+                  className="form-control border-0 bg-white shadow-none ps-1 pe-3" 
                   value={searchDate} 
                   onChange={e => setSearchDate(e.target.value)}
-                  style={{ fontSize: '0.85rem' }}
+                  style={{ fontSize: '0.85rem', minWidth: '130px' }}
                 />
               </div>
               <button 
