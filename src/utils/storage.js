@@ -62,7 +62,7 @@ export const deleteExpense = async (id) => {
  */
 export const login = async (username, password) => {
   // Predefined admin credentials for local access
-  if (username === 'admin' && password === 'admin123') {
+  if (username === 'admin' && password === 'admin') {
     return { success: true, user: { username: 'admin', role: 'administrator' } };
   }
   
