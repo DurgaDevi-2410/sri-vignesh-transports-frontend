@@ -55,24 +55,3 @@ export const deleteExpense = async (id) => {
   localStorageDB.delete('expenses', id);
 };
 
-// --- Auth ---
-/**
- * Simple local authentication simulation.
- * In a real local-only app, you might check against a stored list of users.
- */
-export const login = async (username, password) => {
-  // Predefined admin credentials for local access
-  if (username === 'admin' && password === 'admin') {
-    return { success: true, user: { username: 'admin', role: 'administrator' } };
-  }
-  
-  // Also check if any local users match (if you implement user management)
-  const users = localStorageDB.getAll('users');
-  const user = users.find(u => u.username === username && u.password === password);
-  
-  if (user) {
-    return { success: true, user };
-  }
-  
-  return { success: false, message: 'Invalid credentials' };
-};

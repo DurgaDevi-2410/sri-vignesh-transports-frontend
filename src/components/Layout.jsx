@@ -6,11 +6,6 @@ const Layout = () => {
   const location = useLocation();
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
 
-  const handleLogout = () => {
-    localStorage.removeItem('isAuth');
-    navigate('/login');
-  };
-
   const menuGroups = [
     {
       title: 'MAIN',
@@ -100,7 +95,7 @@ const Layout = () => {
         </div>
 
         <div className="px-4 pb-4 mt-auto">
-           <div className="p-3 rounded-xl d-flex align-items-center justify-content-between" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.06)' }}>
+            <div className="p-3 rounded-xl d-flex align-items-center justify-content-between" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.06)' }}>
               <div className="d-flex align-items-center gap-2">
                  <div className="bg-white bg-opacity-10 d-flex align-items-center justify-content-center" style={{ width: '38px', height: '38px', borderRadius: '10px' }}>
                     <i className="bi bi-person text-white opacity-90 fs-5"></i>
@@ -110,12 +105,6 @@ const Layout = () => {
                     <small className="fw-700 opacity-40 d-block" style={{ fontSize: '9px', color: '#94a3b8', letterSpacing: '0.8px', marginTop: '2px' }}>SVT MANAGER</small>
                  </div>
               </div>
-              <button 
-                className="btn btn-link text-white p-0 border-0 opacity-30 hover-opacity-100 shadow-none" 
-                onClick={handleLogout}
-              >
-                 <i className="bi bi-power fs-5"></i>
-              </button>
            </div>
         </div>
       </div>
